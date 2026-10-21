@@ -7,12 +7,12 @@ async function mostrarPosts() {
     // 2. Convertir la respuesta a JSON
     const posts = await res.json();
 
-    // 3. Mostrar los títulos con map, join e innerHTML
+    
     lista.innerHTML = posts
       .map(p => `<li>${p.title}</li>`)
       .join("");
   } catch (error) {
-    // 4. Mensaje de error
+    
     lista.innerHTML = "<li>No se pudo cargar la información</li>";
   }
 }
